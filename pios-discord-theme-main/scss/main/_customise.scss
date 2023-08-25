@@ -1,0 +1,13 @@
+@use "../top/vars" as *;
+
+// Customise channels and roles / browse channels
+
+.appMount-2yBXZl .emptyPage-2TGR7j,
+.appMount-2yBXZl .scrollerContainer-y16Rs9 {
+    background: $background-color;
+}
+
+.checkIcon-3eAeN_,
+.memberCount-2G9rxE {
+    background: $accent-color;
+}

@@ -1,0 +1,74 @@
+@use "../top/vars" as *;
+@use "../top/border" as bd;
+@use "../top/hsla";
+
+// ---- Explore public servers ----
+
+// Background
+.appMount-2yBXZl .pageWrapper-2PwDoS {
+    background-color: $background-color;
+    @include bd.border(thick);
+}
+
+// Search results searchbox
+.appMount-2yBXZl .searchBox-pyIJJj {
+    background-color: hsla.default($accent-hue, 0.2);
+    backdrop-filter: brightness(0);
+}
+
+.searchBox-pyIJJj:focus,
+.searchBox-pyIJJj:focus-within {
+    border-color: transparent;
+}
+
+// Selected category
+.categoryItem-Kc_HK_.selectedCategoryItem-ZjqSui .itemInner-3e_4G4 {
+    background-color: hsla.default($accent-hue, 0.3);
+}
+
+// Search category searchbox
+.search-25t1e9 .searchBox-31Zv9h:focus,
+.search-25t1e9 .searchBox-31Zv9h:focus-within {
+    box-shadow: none;
+}
+
+.search-25t1e9 .searchBox-31Zv9h .searchBoxInput-3h4etz {
+    color: $bright-color;
+}
+
+// Clear searchbox icon
+.clearIcon-TMIIUa,
+.search-25t1e9 .searchBox-31Zv9h .closeIcon-BMGxx0 {
+    color: $dim-color;
+}
+
+.clearIcon-TMIIUa:hover,
+.search-25t1e9 .searchBox-31Zv9h .closeIcon-BMGxx0:hover {
+    color: $middle-color;
+}
+
+// Language dropdown
+.lookFilled-1GseHa.select-1Ia3hD {
+    border-color: transparent;
+    color: $dim-color;
+}
+
+.popout-1KHNAq {
+    @include bd.border(thin);
+}
+
+// Server card
+.card-2TuZPZ,
+.card-1rhKXq {
+    @include bd.border(thin);
+}
+
+// Separators in search results
+.separator-2t2gPa {
+    display: none;
+}
+
+// Student hub icon
+.iconContainer-6xlTpK {
+    background-color: hsla.default($accent-hue, 0.7);
+}

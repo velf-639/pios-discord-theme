@@ -1,0 +1,6 @@
+@use "../../top/border" as bd;
+
+// ---- Voice noise suppression popover ----
+.noiseCancellationPopout-2-e5Xz {
+    @include bd.border(thin);
+}

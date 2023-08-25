@@ -1,0 +1,6 @@
+@use "../../top/border" as bd;
+
+// ---- New user popover ----
+.popoutContainer-2wbmiM {
+    @include bd.border(thin, bright);
+}

@@ -1,0 +1,33 @@
+@forward "./autocomplete";
+@forward "./emojipicker";
+@forward "./inbox";
+@forward "./menu";
+@forward "./messageoptions";
+@forward "./newuser";
+@forward "./noisesuppression";
+@forward "./search";
+@forward "./threads";
+@forward "./toast";
+@forward "./tooltip";
+@forward "./userprofile";
+
+@use "../../top/border" as bd;
+
+// Popovers
+.contentWrapper-3vHNP2,
+// Emoji picker for reactions
+.contentWrapper-2f9yME,
+// Smallish popover menus
+.menu-2TXYjN,
+// User profile popovers
+.userProfileOuter-2tQwNf,
+// Pinned messages
+.messagesPopoutWrap-3zryHW,
+// Inbox
+.recentMentionsPopout-2bI1ZN,
+// Threads
+.browser-mnQ1T7,
+// Stream picture-in-picture
+.pictureInPictureVideo-2puO2Q {
+    @include bd.border(thick, bright);
+}

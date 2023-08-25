@@ -1,0 +1,11 @@
+@use "../top/border" as bd;
+
+// ---- Channel Permissions plugin popover ----
+.popout-TdhJ6Z,
+.container-8Futzw {
+    @include bd.border(thin);
+}
+
+.container-8Futzw .FarcradaChannelTooltipClass {
+    margin-top: 8px !important;
+}

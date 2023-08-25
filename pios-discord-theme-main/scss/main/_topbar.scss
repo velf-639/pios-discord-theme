@@ -1,0 +1,21 @@
+@use "../top/vars" as *;
+
+// Title bar
+.appMount-2yBXZl .titleBar-1it3bQ::before {
+    content: var(--pios-title-text, "piOS v2.1.01p");
+    color: $dim-color;
+    background: $background-color;
+    position: absolute;
+    top: -4px;
+    left: 0;
+    height: 18px;
+    padding: 4px;
+    line-height: 23px;
+    font-size: 14px;
+    letter-spacing: 0;
+    z-index: 1;
+}
+
+.wordmark-2u86JB {
+    display: none;
+}

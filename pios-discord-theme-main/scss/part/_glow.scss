@@ -1,0 +1,67 @@
+@use "../top/vars" as *;
+@use "../top/glow";
+
+// Chat content text glow
+.markup-eYLPri {
+    text-shadow:
+        2px 0 10px $glow-color,
+        -2px 0 10px $glow-color;
+}
+
+.repliedTextContent-2hOYMB.markup-eYLPri,
+.edited-1v5nT8,
+.markup-eYLPri code.hljs,
+.markup-eYLPri code.inline,
+.timestamp-2qj4__,
+.timestamp-p1Df1m,
+.timestampInline-_lS3aK,
+.threadMessageAccessoryPreview-13YRmc .markup-eYLPri {
+    text-shadow: none;
+}
+
+// Channel and user pings, hyperlinks
+.appMount-2yBXZl .mention,
+.markup-eYLPri a {
+    @include glow.text(20px);
+}
+
+// Role pings, pin/join/thread alert messages, selected text
+.appMount-2yBXZl .mention.roleMention-11Aaqi,
+.content-vSHmMD,
+::selection {
+    @include glow.text(10px);
+}
+
+// Member list usernames with role colours
+.username-3_PJ5r {
+    @include glow.text(5px);
+}
+
+// Special overrides
+// Superhot Team
+span[style="color: rgb(196, 0, 0);"] {
+    @include glow.text(20px, rgba(255, 0, 0, 0.5));
+}
+
+// SuperBOT
+span[style="color: rgb(1, 1, 1);"] {
+    @include glow.text(20px, rgba(0, 200, 255, 0.5));
+}
+
+// Status glow
+.wrapper-3Un6-K {
+    @include glow.status(#23a55a, 139, 47.3%, 43.9%);
+    @include glow.status(#f0b232, 38, 95.7%, 54.1%);
+    @include glow.status(#f23f43, 359, 82.6%, 59.4%);
+    @include glow.status(#593695, 262, 46.8%, 39.8%);
+}
+
+// Do not clip chat content glow
+.zalgo-26OfGz .messageContent-2t3eCI {
+    overflow: visible;
+}
+
+// Boosts bar
+.progressBarContainer-1efroK {
+    box-shadow: 0 0 10px $glow-color;
+}

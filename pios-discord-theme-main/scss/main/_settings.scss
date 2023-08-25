@@ -1,0 +1,166 @@
+@use "../top/vars" as *;
+@use "../top/border" as bd;
+@use "../top/hsla";
+
+// Values slider
+.appMount-2yBXZl .bar-1Bhnl9,
+.appMount-2yBXZl .markDash-yk2kJ- {
+    background-color: $dim-color;
+}
+
+.barFill-2Bh7CX {
+    background: $accent-color;
+}
+
+// Check/uncheck slider toggle
+.container-2nx-BQ.checked-25WXMf {
+    background-color: hsla.default($accent-hue, 0.7) !important;
+    color: hsla.default($accent-hue, 0.7);
+}
+
+.bd-switch input:checked + .bd-switch-body {
+    --switch-color: #{hsla.default($accent-hue, 0.7)};
+}
+
+.container-2nx-BQ {
+    background-color: $dim-color !important;
+    color: $dim-color;
+}
+
+.slider-32CRPX svg path {
+    fill: currentColor !important;
+}
+
+// Discord key redemption
+.appMount-2yBXZl .codeRedemptionRedirect-2hYMSQ {
+    background-color: hsla.default($accent-hue, 0.2);
+    border-color: $accent-color;
+}
+
+// Default payment method
+.appMount-2yBXZl .defaultIndicator-2ndWks {
+    background: $accent-color;
+}
+
+// Authorised apps
+.authedApp-8q3NA9 {
+    @include bd.border(thin);
+}
+
+// Connections
+.connection-YOVI9j {
+    @include bd.border(thin);
+}
+
+// Discord nitro settings tab
+.selectedBackground-1t6xXq {
+    background: hsla.default($accent-hue, 0.2);
+}
+
+// Voice and video
+// Video background
+.backgroundOptionRing-1vvQ0C {
+    border: solid $accent-color;
+    @include bd.border(thin, $accent-color);
+}
+
+// Keybinds
+.defaultKeybind-1rEiTa {
+    height: auto;
+}
+
+.keybindShortcut-3zF1P9 span {
+    background-color: hsla.default($accent-hue, 0.3);
+}
+
+.appMount-2yBXZl .keybindShortcut-3zF1P9 span {
+    box-shadow: inset 0 -4px 0 hsla.default($accent-hue, 0.2);
+}
+
+// Activity status
+.overlayToggleIconOff-ps4gGp rect {
+    fill: $accent-color;
+}
+
+// Remove game
+.appMount-2yBXZl .default-1Tkeeg {
+    background-color: transparent;
+    border: 1px solid hsla.default($accent-hue, 0.7);
+}
+
+// Game overlay
+// Overlay notifications
+.wrapper-SdcMKg {
+    @include bd.border(thin);
+}
+
+.wrapper-SdcMKg.disabledSelected-1jqfsw {
+    @include bd.border(thin, $accent-color);
+}
+
+.option-1QI4c9 {
+    background-color: $border-color-normal;
+}
+
+.selected-18Wszc.option-1QI4c9 {
+    background-color: hsla.default($accent-hue, 0.7);
+    border-color: $accent-color;
+}
+
+.option-1QI4c9:hover {
+    background-color: hsla.default($accent-hue, 0.2);
+}
+
+// Server settings
+
+// Stickers
+.tier-3CS7-p {
+    @include bd.border(thin);
+    padding: 0 16px 16px 0;
+}
+
+// Header
+.appMount-2yBXZl .tierHeaderLocked-30MLlO,
+.appMount-2yBXZl .tierHeaderUnlocked-1OpOLf {
+    background: transparent;
+}
+
+// Sticker placeholder
+.placeholderCard-3eGmb3 {
+    border-color: $dim-color;
+}
+
+// Locked tiers
+.appMount-2yBXZl .tierBody-1d3UiS {
+    background: transparent;
+}
+
+// App directory
+.appMount-2yBXZl .directoryModal-YJsOMv {
+    background: $background-color;
+}
+
+// App categories
+.category-2OvQ93:hover {
+    background: hsla.default($accent-hue, 0.2);
+}
+
+.category-2OvQ93:active {
+    background: hsla.default($accent-hue, 0.7);
+}
+
+// App cards
+.card-2xymMp,
+.item-2Nx4LP,
+.itemContainer-RkoeKz {
+    @include bd.border(thin);
+}
+
+.root-1q0s4N {
+    overflow: visible;
+}
+
+// Highlighted card
+.linkCard-2SSonX {
+    background: hsla.default($accent-hue, 0.2);
+}

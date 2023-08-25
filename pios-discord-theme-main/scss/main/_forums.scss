@@ -1,0 +1,34 @@
+@use "../top/border" as bd;
+
+// Forums
+.container-3wLKDe {
+    @include bd.border(thick);
+}
+
+// Forum post
+.container-2qVG6q {
+    @include bd.border(thin);
+}
+
+// See more
+.container-2O1UgZ {
+    @include bd.border(thin);
+}
+
+// Make new post
+// Image container
+.container-3Om6RL,
+.container-JhuCwn .popout-2vZMlk {
+    @include bd.border(thin, bright);
+}
+
+// ---- Home ----
+.homeContainer-r4Hvv1 {
+    @include bd.border(thick);
+}
+
+// Message highlight
+.card-3x20HF,
+.card-3x20HF:hover {
+    @include bd.border(thin);
+}

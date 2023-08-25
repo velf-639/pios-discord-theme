@@ -1,0 +1,18 @@
+@use "../../top/vars" as *;
+@use "../../top/border" as bd;
+
+// ---- Tooltips ----
+.tooltip-33Jwqe {
+    @include bd.border(thin, bright);
+}
+
+// Arrow towards tooltip source
+.tooltipPointer-sMBQqe {
+    display: none;
+}
+
+// "Verified" connection tooltip
+.appMount-2yBXZl .tooltipBrand-20XsMA,
+.theme-light .tooltipBrand-20XsMA {
+    background-color: $background-color;
+}

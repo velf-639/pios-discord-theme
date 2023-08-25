@@ -1,0 +1,166 @@
+@use "../top/font";
+@use "../top/hsla";
+@use "../top/vars" as *;
+
+:root {
+    // RadialStatus
+    --rs-small-spacing: 0px; // Gap between avatar and status for members list/dms | MUST end in px
+    --rs-medium-spacing: 0px; // Gap between avatar and status for User popout | MUST end in px
+    --rs-large-spacing: 0px; // Gap between avatar and status for User profiles | MUST end in px
+    --rs-small-width: 2px; // Thickness of status border for members list/dms | MUST end in px
+    --rs-medium-width: 3px; // Thickness of status border for User popout | MUST end in px
+    --rs-large-width: 4px; // Thickness of status border for User profile | MUST end in px
+    --rs-avatar-shape: 0%; // 50% for round - 0% for square
+    --rs-online-color: hsl(139, calc(var(--saturation-factor, 1) * 47.3%), 43.9%); // Colour for online status
+    --rs-idle-color: hsl(38, calc(var(--saturation-factor, 1) * 95.7%), 54.1%); // Colour for idle status
+    --rs-dnd-color: hsl(359, calc(var(--saturation-factor, 1) * 82.6%), 59.4%); // Colour for dnd status
+    --rs-offline-color: hsl(214, calc(var(--saturation-factor, 1) * 9.9%), 50.4%); // Colour for offline status
+    --rs-streaming-color: hsl(262, calc(var(--saturation-factor, 1) * 46.8%), 39.8%); // Colour for streaming status
+    --rs-invisible-color: var(--rs-offline-color); // Colour for invisible status - Note: this will only show for your own invisibility
+    --rs-phone-color: var(--rs-online-color); // Colour of the ring and phone icon when a user is on their phone |
+    --rs-phone-visible: none; // Visibility of the phone icon next to a users avatar. | block = visible | none = hidden
+
+    // Defaults, can be overridden in .theme.css
+    --pios-glow-hue: 180;
+    --pios-glow-intensity: 1;
+    --pios-spacing: 1;
+    --pios-accent-hue: 0;
+    --pios-title-text: "piOS v2.1.01p";
+
+    // See https://github.com/MiniDiscordThemes/CRT/#customisation for customisation settings.
+    --crt-height: 9999;
+    --crt-size: 4px;
+
+    --crt-stripe: block;
+    --crt-stripe-light-color: rgba(255, 255, 255, 0.1);
+    --crt-stripe-dark-color: rgba(0, 0, 0, 0.1);
+
+    // ⛐ This effect is performance-intensive.
+    --crt-scanline: none;
+    --crt-scanline-speed: 3s;
+    --crt-scanline-color: rgba(0, 0, 0, 0.5);
+    --crt-scanline-direction: normal;
+
+    // ⚠ This is a fast flickering effect and may not be suitable for those with photosensitive epilepsy.
+    --crt-flicker: none;
+    --crt-flicker-speed: calc(1s / 30);
+    --crt-flicker-color: rgba(0, 0, 0, 0.1);
+}
+
+// Defaults, can be overridden in .theme.css
+.theme-dark {
+    --pios-background-color: #{$black};
+    --pios-bright-color: #{$white};
+    --pios-middle-color: #{nth($grey, 4)};
+    --pios-dim-color: #{nth($grey, 2)};
+}
+
+.theme-light {
+    --pios-background-color: #{$white};
+    --pios-bright-color: #{$black};
+    --pios-middle-color: #{nth($grey, 1)};
+    --pios-dim-color: #{nth($grey, 3)};
+}
+
+// Assign variables
+.theme-dark,
+.theme-light {
+    // Text colours
+    --header-primary: #{$bright-color}; // Server name, channel name, default user colour
+    --text-normal: #{$bright-color};
+    --text-link: #{$bright-color};
+    --text-link-low-saturation: #{$bright-color};
+    --text-positive: #{$bright-color};
+    --text-warning: #{$bright-color};
+    --interactive-active: #{$bright-color}; // default: unread dot marker, current channel name
+
+    --text-muted: #{$dim-color};
+    --header-secondary: #{$dim-color};
+    --interactive-muted: #{$dim-color};
+    --interactive-normal: #{$middle-color};
+
+    --text-danger: #{$accent-color};
+    --text-brand: hsl(#{$accent-hue}, calc(var(--saturation-factor) * 80%), 50%);
+
+    // Backgrounds
+    --background-primary: #{$background-color};
+    --background-secondary: #{$background-color};
+    --background-secondary-alt: #{$background-color};
+    --background-tertiary: #{$background-color};
+    --background-mobile-primary: #{$background-color};
+    --background-mobile-secondary: #{$background-color};
+    --background-accent: #{$accent-color};
+    --background-floating: #{$background-color};
+    --background-mentioned: #{hsla.default($accent-hue, 0.2)};
+    --background-modifier-hover: #{hsla.default($accent-hue, 0.2)};
+    --background-modifier-active: #{hsla.default($accent-hue, 0.7)};
+    --background-modifier-selected: #{hsla.default($accent-hue, 0.3)};
+    --background-modifier-accent: transparent;
+    --channeltextarea-background: transparent;
+    --home-background: #{$background-color};
+    --modal-background: #{$background-color};
+    --input-background: #{hsla.default($accent-hue, 0.2)};
+    --deprecated-card-bg: #{hsla.default($accent-hue, 0.2)};
+
+    // Buttons
+    --button-danger-background: #{hsla.default($accent-hue, 0.7)};
+    --button-danger-background-hover: #{$accent-color};
+    --button-danger-background-active: #{$accent-color};
+    --button-positive-background: #{hsla.default($accent-hue, 0.7)};
+    --button-positive-background-hover: #{$accent-color};
+    --button-positive-background-active: #{$accent-color};
+    --button-outline-positive-text: #{$bright-color};
+    --button-outline-positive-text-hover: #{$bright-color};
+    --button-outline-positive-text-active: #{$bright-color};
+    --button-outline-positive-background-hover: #{hsla.default($accent-hue, 0.3)};
+    --button-outline-positive-background-active: #{hsla.default($accent-hue, 0.3)};
+    --button-outline-positive-border: #{$accent-color};
+    --button-outline-positive-border-hover: #{$accent-color};
+    --button-outline-positive-border-active: #{$accent-color};
+    --button-outline-danger-text: #{$bright-color};
+    --button-outline-danger-text-hover: #{$bright-color};
+    --button-outline-danger-border: #{$accent-color};
+    --button-outline-danger-background-hover: #{hsla.default($accent-hue, 0.7)};
+    --button-outline-danger-background-active: #{$accent-color};
+    --button-outline-danger-border-hover: #{hsla.default($accent-hue, 0.7)};
+    --button-outline-danger-border-active: #{$accent-color};
+    --button-secondary-background: #{$background-color};
+    --button-secondary-background-hover: #{hsla.default($accent-hue, 0.2)};
+    --button-secondary-background-active: #{hsla.default($accent-hue, 0.7)};
+
+    // Scrollbars
+    --scrollbar-thin-thumb: #{$accent-color};
+    --scrollbar-thin-track: transparent;
+    --scrollbar-auto-thumb: #{$accent-color};
+    --scrollbar-auto-track: transparent;
+    --scrollbar-auto-scrollbar-color-thumb: #{$accent-color};
+    --scrollbar-auto-scrollbar-color-track: transparent;
+
+    // Drop shadows
+    --elevation-stroke: transparent;
+    --elevation-low: transparent;
+    --elevation-medium: transparent;
+    --elevation-high: transparent;
+
+    // Search
+    --search-popout-option-fade: linear-gradient(90deg, transparent, #{$background-color} 80%); // Fading effect after search options
+    --search-popout-option-fade-hover: linear-gradient(90deg, transparent, #{$background-color} 50%);
+    // --search-popout-option-filter-text: #{$dim-color};
+    --search-popout-option-non-text-color: #{$dim-color};
+    //--search-popout-option-filter-color:    #{$dim-color};
+    --search-popout-option-answer-color: #{$dim-color};
+    --search-popout-date-picker-border: #{$dim-color};
+    // As of 8th Apr 2022, these variables do nothing
+    --search-popout-date-picker-hint-text: #{$dim-color};
+    --search-popout-date-picker-hint-value-text: #{$bright-color};
+    --search-popout-date-picker-hint-value-background: #{hsla.default($accent-hue, 0.2)};
+    --search-popout-date-picker-hint-value-background-hover: #{hsla.default($accent-hue, 0.3)};
+    --deprecated-text-input-border-disabled: var(--borderColor); // for some reason used by day box borders
+
+    // Misc parts
+    --status-danger: #{$accent-color}; // Servers sidebar notification counter background
+    // Focus ring when navigating by keyboard
+    --focus-primary: #{hsla.default($accent-hue + 180, 1)};
+    // Mentioned message left bar
+    --info-warning-foreground: #{$accent-color};
+}

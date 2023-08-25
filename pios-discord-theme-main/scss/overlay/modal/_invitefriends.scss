@@ -1,0 +1,29 @@
+@use "../../top/vars" as *;
+@use "../../top/hsla";
+
+// ---- Invite friends to server modal ----
+// Copy url
+.copyInput-1dXbXE .input-3O04eu {
+    background: transparent;
+}
+
+// Invite link settings
+// Selected item icon
+.selectedIcon-19TbzU {
+    color: $dim-color;
+}
+
+// Search bar
+.container-2oNtJn {
+    background-color: #{hsla.default($accent-hue, 0.2)};
+}
+
+// Search results
+.appMount-2yBXZl .inviteRow-3vmB7i:hover {
+    background: hsla.default($accent-hue, 0.2);
+}
+
+// "Invite" button
+.inviteRowButton-3hcOhY {
+    padding: 2px;
+}
